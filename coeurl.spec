@@ -31,9 +31,9 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 %build
 	
 %meson \
-    -Dwerror=false \	
-    -Dtests=false \
-    -Dexamples=false
+	-Dwerror=false \
+	-Dtests=false \
+	-Dexamples=false
 %meson_build
 
 %install	
