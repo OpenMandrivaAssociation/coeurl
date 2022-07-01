@@ -22,6 +22,7 @@ Based on the CURL-libevent example.
 %package -n %{libname}
 Summary:	Simple library to do http requests asynchronously via CURL in C++.
 Group:		System/Libraries
+Provides:	coeurl
 
 %description -n %{libname}
 Simple library to do http requests asynchronously via CURL in C++.
