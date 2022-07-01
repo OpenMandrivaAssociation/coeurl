@@ -51,7 +51,7 @@ Requires:	%{libname} = %{version}-%{release}
 %files -n %{libname}
 %doc CHANGELOG.md README.md
 %license LICENSE
-%{_libdir}/lib%{name}.so.*{major}*
+%{_libdir}/lib%{name}.so.*%{major}*
 	
 %files -n %{devname}
 %{_libdir}/lib%{name}.so
