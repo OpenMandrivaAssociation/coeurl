@@ -1,3 +1,7 @@
+%define major 0
+%define libname %mklibname coeurl
+%define devname %mklibname coeurl -d
+
 Name: coeurl
 Version: 0.2.0
 Release: 1
@@ -14,22 +18,27 @@ BuildRequires: pkgconfig(spdlog)
 %description
 Simple library to do http requests asynchronously via CURL in C++.
 Based on the CURL-libevent example.
+
+%package -n %{libname}
+Summary:	Simple library to do http requests asynchronously via CURL in C++.
+Group:		System/Libraries
+
+%description -n %{libname}
+Simple library to do http requests asynchronously via CURL in C++.
+Based on the CURL-libevent example.
 	
-	
-%package devel	
+%package -n %{devname}
 Summary: Development files for %{name}
 	
-Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
+Requires:	%{libname} = %{version}-%{release}
 	
-%description devel
+%description -n %{devname}
 %{summary}.
 	
-%prep
-	
-%autosetup -n %{name}-v%{version} -p1 
+%prep	
+%autosetup -n %{name}-v%{version} -p1
 	
 %build
-	
 %meson \
 	-Dwerror=false \
 	-Dtests=false \
@@ -39,13 +48,12 @@ Requires: %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 %install	
 %meson_install
 	
-%files
+%files -n %{libname}
 %doc CHANGELOG.md README.md
 %license LICENSE
-%{_libdir}/lib%{name}.so.0*
+%{_libdir}/lib%{name}.so.*{major}*
 	
-%files devel
+%files -n %{devname}
 %{_libdir}/lib%{name}.so
 %{_includedir}/%{name}/	
 %{_libdir}/pkgconfig/%{name}.pc
-	
