@@ -3,7 +3,7 @@
 %define devname %mklibname coeurl -d
 
 Name: coeurl
-Version: 0.2.0
+Version: 0.2.1
 Release: 1
 License: MIT
 URL: https://nheko.im/nheko-reborn/coeurl
