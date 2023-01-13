@@ -3,8 +3,8 @@
 %define devname %mklibname coeurl -d
 
 Name: coeurl
-Version: 0.2.1
-Release: 2
+Version: 0.3.0
+Release: 1
 License: MIT
 URL: https://nheko.im/nheko-reborn/coeurl
 Summary: Simple async wrapper around CURL for C++	
