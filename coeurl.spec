@@ -4,7 +4,7 @@
 
 Name: coeurl
 Version: 0.3.0
-Release: 4
+Release: 5
 License: MIT
 URL: https://nheko.im/nheko-reborn/coeurl
 Summary: Simple async wrapper around CURL for C++	
