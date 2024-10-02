@@ -4,13 +4,14 @@
 
 Name: coeurl
 Version: 0.3.1
-Release: 2
+Release: 3
 License: MIT
 URL: https://nheko.im/nheko-reborn/coeurl
 Summary: Simple async wrapper around CURL for C++	
 Source0: https://nheko.im/nheko-reborn/coeurl/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
 
 BuildRequires: meson
+BuildRequires: pkgconfig(fmt)
 BuildRequires: pkgconfig(libcurl)
 BuildRequires: pkgconfig(libevent)	
 BuildRequires: pkgconfig(spdlog)
